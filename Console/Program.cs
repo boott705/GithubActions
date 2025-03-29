@@ -80,6 +80,11 @@ public class Program
 
 	public static double Divide(string x, string y)
 	{
+		if (double.Parse(y) == 0)
+		{
+			throw new DivideByZeroException("You can't divide by zero.");
+		}
+
 		return double.Parse(x) / double.Parse(y);
 	}
 
